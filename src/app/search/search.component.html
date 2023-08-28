@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+
+        <input type="text" class="form-control mb-5" placeholder="search here for name" #yourTitleInput 
+         (keyup)="sendit(yourTitleInput.value)">
+         
+                <div *ngIf="foundData" class="col-md-6">
+    <div  class="card " style="width: 100%">
+      <div  class="card " style="width: 100%">
+        <div style="height: 200px;" class="card-body  ">
+          <h5 class="card-title"> {{foundData.firstName}} {{foundData.maidenName}} {{foundData.lastName}}</h5>
+          <p>age: {{foundData.age}}</p>
+          <p>phone: {{foundData.phone}}</p>
+        </div>
+      </div>
+      </div>
+</div>
+
+<input type="text" class="form-control my-5" placeholder="search here for number" #yourNumberInput  
+(keyup)="number(yourNumberInput.value)">
+
+<div *ngIf="foundNumberData" class="col-md-2">
+<div  class="card " style="width: 100%">
+<div  class="card " style="width: 100%">
+<div style="height: 200px;" class="card-body  ">
+<h5 class="card-title"> {{foundNumberData.firstName}} {{foundNumberData.maidenName}} {{foundNumberData.lastName}}</h5>
+<p>age: {{foundNumberData.age}}</p>
+<p>phone: {{foundNumberData.phone}}</p>
+</div>
+</div>
+</div>
+</div>
+        
+    </div>
+</div>

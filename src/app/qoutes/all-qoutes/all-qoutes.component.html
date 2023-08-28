@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="row ">
+    
+     <app-single-qoute *ngFor="let i of users" [ChildInputUser]="i" 
+     (deleteUserEvent)="deleteUser($event)"
+     ></app-single-qoute>
+    </div>
+</div>
